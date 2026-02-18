@@ -18,3 +18,8 @@ def test_scaffold_directories_exist() -> None:
 
     for directory in expected_directories:
         assert Path(directory).exists(), f"Missing scaffold directory: {directory}"
+
+
+def test_spec_version_is_set() -> None:
+    value = Path("SPEC_VERSION").read_text(encoding="utf-8").strip()
+    assert value and value != "UNKNOWN", "SPEC_VERSION must not be UNKNOWN"
