@@ -1,0 +1,4 @@
+services:
+  agentos-dev:
+    image: python:3.11-slim
+    command: ["python", "-V"]
