@@ -9,6 +9,6 @@ description = "AgentOS monorepo scaffold"
 requires-python = ">=3.11"
 
 [tool.pytest.ini_options]
-pythonpath = ["."]
+pythonpath = [".", "packages/contracts/src", "apps/api/src", "apps/cli/src", "packages/memory/src", "packages/policy/src", "packages/executor/src", "packages/supervisor/src"]
 testpaths = ["tests"]
 addopts = "-q"
